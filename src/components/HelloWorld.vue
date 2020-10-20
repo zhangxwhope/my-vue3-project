@@ -34,14 +34,19 @@
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
+import Super from './Super.vue';
 
 @Options({
   props: {
     msg: String
   }
 })
-export default class HelloWorld extends Vue {
+export default class HelloWorld extends Super {
   msg!: string
+  
+  created () {
+    console.log(this.superValue, 'superValue')
+  }
 }
 </script>
 
