@@ -7,18 +7,20 @@
 </template>
 
 <script lang="ts">
-import { Options, Vue } from 'vue-class-component'
+import { Options, Vue } from 'vue-class-component';
+import { Log } from '../decorators';
 
 export default class Counter extends Vue {
-  count = 0
+  public count = 0;
 
-  increment () {
-    this.count++
+  @Log
+  public increment() {
+    this.count++;
   }
 
-  decrement () {
-    if (this.count === 0) return
-    this.count--
+  public decrement() {
+    if (this.count === 0) { return; }
+    this.count--;
   }
 }
 </script>
