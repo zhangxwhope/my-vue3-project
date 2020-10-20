@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
+    <Greeting name="John"/>
     <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
     <Mixins/>
   </div>
@@ -10,11 +11,13 @@
 import { Options, Vue } from 'vue-class-component';
 import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
 import Mixins from '@/components/Mixins.vue'; // @ is an alias to /src
+import Greeting from '@/components/Greeting.vue'; // @ is an alias to /src
 
 @Options({
   components: {
     HelloWorld,
-    Mixins
+    Mixins,
+    Greeting
   },
 })
 export default class Home extends Vue {}
